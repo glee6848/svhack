@@ -43,7 +43,7 @@ input {
  -moz-transition: border-color .20s;
  -o-transition: border-color .20s;
  transition: border-color .20s;
-	height: 29px !important;
+	height: 40px;
 	cursor: pointer;
 }
 input:hover {
@@ -59,6 +59,7 @@ input:active {
 	box-shadow:inset 0 0 10px #D4D4D4;
 }
 input.bluebtn {
+	height: 29px;
 	border: 1px solid #3079ED !important;
 	background: #4B8DF8;
 	background: -webkit-linear-gradient(top, #4C8FFD, #4787ED);
@@ -78,45 +79,8 @@ input.bluebtn:hover {
 	background: -ms-linear-gradient(top, #4D90FE, #357AE8);
 	background: -o-linear-gradient(top, #4D90FE, #357AE8);
 }
-input.greenbtn {
-	border: 1px solid #29691D !important;
-	background: #3A8E00;
-	background: -webkit-linear-gradient(top, #3C9300, #398A00);
-	background: -moz-linear-gradient(top, #3C9300, #398A00);
-	background: -ms-linear-gradient(top, #3C9300, #398A00);
-	background: -o-linear-gradient(top, #3C9300, #398A00);
- -webkit-transition: border .20s;
- -moz-transition: border .20s;
- -o-transition: border .20s;
- transition: border .20s;
-}
-input.greenbtn:hover {
-	border: 1px solid #2D6200 !important;
-	background: #3F83F1;
-	background: -webkit-linear-gradient(top, #3C9300, #368200);
-	background: -moz-linear-gradient(top, #3C9300, #368200);
-	background: -ms-linear-gradient(top, #3C9300, #368200);
-	background: -o-linear-gradient(top, #3C9300, #368200);
-}
-input.redbtn {
-	border: 1px solid #D14836 !important;
-	background: #D64937;
-	background: -webkit-linear-gradient(top, #DC4A38, #D14836);
-	background: -moz-linear-gradient(top, #DC4A38, #D14836);
-	background: -ms-linear-gradient(top, #DC4A38, #D14836);
-	background: -o-linear-gradient(top, #DC4A38, #D14836);
- -webkit-transition: border .20s;
- -moz-transition: border .20s;
- -o-transition: border .20s;
- transition: border .20s;
-}
-input.redbtn:hover {
-	border: 1px solid #B0281A !important;
-	background: #D14130;
-	background: -webkit-linear-gradient(top, #DC4A38, #C53727);
-	background: -moz-linear-gradient(top, #DC4A38, #C53727);
-	background: -ms-linear-gradient(top, #DC4A38, #C53727);
-	background: -o-linear-gradient(top, #DC4A38, #C53727);
+input.bluebtn2 {
+	height: 40px;
 }
 input.action:hover {
 	-moz-box-shadow: 0 1px 0px #DDD;
@@ -131,12 +95,6 @@ input.action:active {
 }
 input.bluebtn:active {
 	border-color: #2F5BB7 !important;
-}
-input.greenbtn:active {
-	border-color: #2D6200 !important;
-}
-input.redbtn:active {
-	border-color: #B0281A !important;
 }
 /*------------------------------------*\
 	$BUTTON LABEL
@@ -160,9 +118,6 @@ input span.label {
 input:hover .label.bluebtn {
 	color: #7090C8;
 }
-input:hover .label.greenbtn {
-	color: #42B449;
-}
 input:hover .label.yellow {
 	color: #F7CB38;
 }
@@ -170,26 +125,12 @@ input.bluebtn .label {
 	color: #FFF !important;
 	text-shadow: 0 1px 0 #2F5BB7 !important;
 }
-input.greenbtn .label {
-	color: #FFF !important;
-	text-shadow: 0 1px 0 #2D6200 !important;
-}
-input.redbtn .label {
-	color: #FFF !important;
-	text-shadow: 0 1px 0 #B0281A !important;
-}
 input.action .label {
 	padding: 0 17px !important;
 }
 input.action:active .label {
 	color: #333 !important;
 }
-input.bluebtn:active .label, input.greenbtn:active .label, input.redbtn:active .label {
+input.bluebtn:active .label {
 	color: #FFF !important;
-}
-input.addButton {
-	height: 100px;
-}
-input.exportList{
-	margin-bottom: 10px;
 }
