@@ -10,12 +10,12 @@ function start() {
 			body += chunk;
 		});
 		request.on("end", function() {
-			console.log("Request received.");
+			console.log("\n" + (new Date()) + ": Request received.");
 			if (body != "") {
 				body = body.replace(/^data:image\/jpeg;base64,/,"");
 				fs.writeFile("temp/temp.jpg", body, 'base64', function(err) {
 					if (err) {
-						console.log(err);
+						console.log((new Date()) + ": " + err);
 					}
 				});
 			}
@@ -27,9 +27,9 @@ function start() {
 					response.end();
 					fs.unlink("temp/temp.jpg", function(err) {
 						if (err) {
-							console.log("Couldn't delete temp.jpg!");
+							console.log((new Date()) + ": Couldn't delete temp.jpg!");
 						} else {
-							console.log("temp.jpg deleted");
+							console.log((new Date()) + ": temp.jpg deleted");
 						}
 					});
 				} else {
@@ -39,9 +39,9 @@ function start() {
 					response.end();
 					fs.unlink("temp/temp.jpg", function(err) {
 						if (err) {
-							console.log("Couldn't delete temp.jpg!");
+							console.log((new Date()) + ": Couldn't delete temp.jpg!");
 						} else {
-							console.log("temp.jpg deleted");
+							console.log((new Date()) + ": temp.jpg deleted");
 						}
 					});
 				}
@@ -49,7 +49,7 @@ function start() {
 		});
 	}
 	http.createServer(onRequest).listen(8888);
-	console.log("Server has started.");
+	console.log((new Date()) + ": Server has started.");
 }
 
 exports.start = start;
