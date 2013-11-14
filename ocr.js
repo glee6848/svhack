@@ -21,13 +21,29 @@ function start() {
 			}
 			nodecr.process("temp/temp.jpg", function(err, text) {
 				if (err) {
+					console.log("Tesseract error!");
 					response.writeHead(500, {"Content-Type": "text/plain", "Access-Control-Allow-Origin": "*"});
 					response.write("Tesseract error");
 					response.end();
+					fs.unlink("temp/temp.jpg", function(err) {
+						if (err) {
+							console.log("Couldn't delete temp.jpg!");
+						} else {
+							console.log("temp.jpg deleted");
+						}
+					});
 				} else {
+					console.log("Success: %s", text);
 					response.writeHead(200, {"Content-Type": "text/plain", "Access-Control-Allow-Origin": "*"});
 					response.write(text.substring(0, 5));
 					response.end();
+					fs.unlink("temp/temp.jpg", function(err) {
+						if (err) {
+							console.log("Couldn't delete temp.jpg!");
+						} else {
+							console.log("temp.jpg deleted");
+						}
+					});
 				}
 			});
 		});
